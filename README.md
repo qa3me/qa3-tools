@@ -10,7 +10,7 @@
 
 ## Status
 
-Pre-release. The first command, `header-audit`, is under v0.1 validation and has not been published as a release.
+`v0.1.0` is the first public release of `qa3 header-audit`. Prebuilt binaries and SHA-256 checksums are available from the [v0.1.0 release](https://github.com/qa3me/qa3-tools/releases/tag/v0.1.0).
 
 ## Scope
 
@@ -25,6 +25,15 @@ qa3 header-audit <https-url>
 It audits response security headers and verified TLS state for one explicitly supplied HTTPS endpoint. It does not crawl, enumerate hosts, scan ports, submit forms, authenticate, or test exploits.
 
 ## Quick Start
+
+Install `v0.1.0` with Go:
+
+```bash
+go install github.com/qa3me/qa3-tools/cmd/qa3@v0.1.0
+qa3 version
+```
+
+Prebuilt release artifacts are available for Linux, macOS, and Windows on amd64 and arm64.
 
 Requirements for development:
 
