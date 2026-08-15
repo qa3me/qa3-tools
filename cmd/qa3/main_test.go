@@ -67,3 +67,17 @@ func TestRunHeaderAuditRejectsInvalidFlags(t *testing.T) {
 		t.Fatalf("redirect code = %d, want 2", code)
 	}
 }
+
+func TestRunVersionUsesBuildVersion(t *testing.T) {
+	oldVersion := version
+	version = "9.8.7-test"
+	t.Cleanup(func() { version = oldVersion })
+
+	var stdout, stderr bytes.Buffer
+	if code := run([]string{"version"}, &stdout, &stderr); code != 0 {
+		t.Fatalf("version code = %d, want 0", code)
+	}
+	if got := stdout.String(); got != "qa3 9.8.7-test\n" {
+		t.Fatalf("version stdout = %q", got)
+	}
+}
