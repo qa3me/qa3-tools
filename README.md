@@ -28,7 +28,7 @@ It audits response security headers and verified TLS state for one explicitly su
 
 Requirements for development:
 
-- Go 1.26.5 is the CI verification runtime.
+- Go 1.26.6 is the CI verification runtime.
 - The current source uses only the Go standard library at runtime.
 
 Run the command from the repository root:
