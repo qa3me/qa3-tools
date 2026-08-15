@@ -13,7 +13,7 @@ import (
 	"github.com/qa3me/qa3-tools/internal/headeraudit"
 )
 
-const version = "0.1.0-dev"
+var version = "0.1.0-dev"
 
 func main() {
 	os.Exit(run(os.Args[1:], os.Stdout, os.Stderr))
@@ -127,5 +127,5 @@ func printUsage(w io.Writer) {
 	fmt.Fprintln(w, "")
 	fmt.Fprintln(w, "Commands:")
 	fmt.Fprintln(w, "  header-audit   Audit response security headers and TLS for one HTTPS URL")
-	fmt.Fprintln(w, "  version        Print the development version")
+	fmt.Fprintln(w, "  version        Print the build version")
 }
