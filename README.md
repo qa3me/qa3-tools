@@ -26,14 +26,7 @@ It audits response security headers and verified TLS state for one explicitly su
 
 ## Quick Start
 
-Install `v0.1.0` with Go:
-
-```bash
-go install github.com/qa3me/qa3-tools/cmd/qa3@v0.1.0
-qa3 version
-```
-
-Prebuilt release artifacts are available for Linux, macOS, and Windows on amd64 and arm64.
+Download the appropriate `v0.1.0` binary and `SHA256SUMS` from the GitHub release, verify the binary checksum, and place the executable on your `PATH`. Prebuilt artifacts are available for Linux, macOS, and Windows on amd64 and arm64.
 
 Requirements for development:
 
